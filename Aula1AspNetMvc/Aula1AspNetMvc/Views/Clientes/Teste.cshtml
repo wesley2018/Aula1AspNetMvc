@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Aula1AspNetMvc.Models.Cliente>
+@{
+    ViewBag.Title = "Teste";
+}
+
+<h2>Teste</h2>
+<div>@ViewBag.Ola</div>
+<div>@ViewBag.a</div>
+<div>@ViewBag.b</div>
+<li>@ViewBag.c</li>
+
+<div>@Html.Raw(ViewBag.d)</div>
+
+@{ 
+    foreach ( var cliente in Model)
+    {
+        <div>@Html.Hidden("Id", cliente.Id)</div>        
+    }
+}
+
